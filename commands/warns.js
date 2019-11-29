@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 
   const userwarn = new db.table('USERWARNINGs');
 
-  userwarn.startsWith(`warn_${message.author.id}`).then(resp => {
+  userwarn.indexOf(`warn_${message.author.id}` == 0).then(resp => {
 
     let title = 'Warns';
     var finalLb = "";
